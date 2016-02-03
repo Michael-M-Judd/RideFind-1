@@ -1,0 +1,67 @@
+CREATE TABLE RideListings
+(
+listing_id INT NOT NULL AUTO_INCREMENT,
+listing_date DATETIME,
+listing_departure_date DATETIME,
+departure_location VARCHAR(45),
+destination_location VARCHAR(45),
+empty_seat INT(1),
+listing_price INT(3),
+vacancy BOOL,
+Driver_Account_driver_id INT,
+PRIMARY KEY (listing_id)
+);
+
+CREATE TABLE User_Account
+(
+user_id INT NOT NULL AUTO_INCREMENT, 
+email_address VARCHAR(45),
+first_name VARCHAR(45),
+last_name VARCHAR(45),
+gender BOOL,
+driver_status BOOL,
+birthday DATETIME,
+profile_picture VARCHAR(100),
+password VARCHAR(18),
+PRIMARY KEY(user_id)
+);
+
+CREATE TABLE Driver_Account
+(
+User_Account_user_id INT NOT NULL,
+rating INT,
+Car_car_id INT NOT NULL,
+PRIMARY KEY(User_Account_user_id)
+);
+
+CREATE TABLE Car
+(
+car_id INT NOT NULL AUTO_INCREMENT,
+make VARCHAR(45),
+model VARCHAR(45),
+year VARCHAR(45),
+seat INT,
+User_Account_user_id INT,
+PRIMARY KEY (User_Account_user_id)
+);
+
+CREATE TABLE Booking
+(
+booking_id INT NOT NULL AUTO_INCREMENT,
+RideListings_listing_id INT,
+User_Account_user_id INT,
+driver_status BOOL,
+PRIMARY KEY (booking_id)
+);
+
+CREATE TABLE Restric_User
+(
+ban_id INT NOT NULL AUTO_INCREMENT,
+ban_start_time TIME,
+ban_end_time TIME,
+perm_ban BOOL,
+ban_reason VARCHAR(100),
+User_Account_user_id INT,
+PRIMARY KEY (ban_id)
+);
+
