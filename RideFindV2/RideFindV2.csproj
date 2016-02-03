@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6B75F81-F318-400B-B19D-E7E3B337338E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RideFindV2</RootNamespace>
+    <AssemblyName>RideFindV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChreneLib">
+      <HintPath>..\..\..\..\..\Downloads\ChreneLib_dll\ChreneLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookRide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookRide.Designer.cs">
+      <DependentUpon>bookRide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateRide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateRide.Designer.cs">
+      <DependentUpon>CreateRide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RideFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RideFind.Designer.cs">
+      <DependentUpon>RideFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="waterMarkBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bookRide.resx">
+      <DependentUpon>bookRide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateRide.resx">
+      <DependentUpon>CreateRide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RideFind.resx">
+      <DependentUpon>RideFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bACKGROUND.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bACKGROUND1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add139.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circular301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifications3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search74.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tool305.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transport771.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignInPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignInPage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\officematerial6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\createRide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbhelp\dbhelp.vcxproj">
+      <Project>{07489fbc-31bf-4983-bc9f-620b9368d7e8}</Project>
+      <Name>dbhelp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RideC\RideC.vcxproj">
+      <Project>{2f18ff23-fe4f-4bc5-ad86-49c31ac103e0}</Project>
+      <Name>RideC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserC\UserC.vcxproj">
+      <Project>{42ecd1db-dd06-43d0-a5d7-ba5d1a313b90}</Project>
+      <Name>UserC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ABOUTFINAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favourite24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\johncena_bio_20121120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questions1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
