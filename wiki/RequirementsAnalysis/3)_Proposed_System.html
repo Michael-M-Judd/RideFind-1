@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>3) Proposed System</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="3-Proposed-System"></a>
+<h1 >3) Proposed System<a href="#3-Proposed-System" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Scenario"></a>
+<h2 >Scenario<a href="#Scenario" class="wiki-anchor">&para;</a></h2>
+
+
+After a busy week of midterms and assignments, Gale just wants go home for some stuffed turkey, mashed potatoes, gravy and pumpkin pie. His parents can’t pick him up from University so he needs to find a ride home. It’s a few days till he wants to go home and tickets for trains and busses are as expensive as his textbooks. Gale’s friend Isabelle-Bader recently told him about this nifty piece of software: RideFind. Gale opens up his fruit machine and downloads the program. He opens RideFind and is welcomed by a login screen:
+	<ul>
+	<li>Sign up for RideFind.</li>
+		<li>Name</li>
+		<li>University student email (verified by university) </li>
+		<li>Password (and password confirmation)</li>
+		<li>Birthday</li>
+		<li>Gender</li>
+		<li>Mobile phone</li>
+		<li>Car model (if applicable/optional)</li>
+	</ul>
+
+
+	<p>Gale ponders the meaning of “car model.” Unfortunately, Gale’s parents didn’t pitch to fund for his own car, so he just continues with the passenger login.</p>
+
+
+Two buttons appear on the screen:
+	<ul>
+	<li>Looking for a ride?</li>
+		<li>Offering a ride?</li>
+	</ul>
+
+
+	<p>Gale is happy with the simplicity of this user interface. He clicks “Looking for a ride?” The screen then changes to a screen of listings, he’s a little confused but he figures it out by looking at the conveniently named headings: “Driver Name,” “Destination,” “Departure Location,” “Date of Departure,” “Time of Departure,” and an icon representing the number of seats left in the car. <br />He notices the “Search” bar. He types in his commute “from,” commute “to,” and “departure date.” <br />The listings update corresponding to his search. He finds a ride, clicks on the Driver’s profile, and notices the positive reviews. He clicks “book a ride,” and clicks on the empty window seat in the car. He also notes the handy “message” icon, so if he needs to contact the driver, he can do so.  As soon as the ride is booked, a window pops up with two buttons: “Pay now with Tilt,” (OPTIONAL FEATURE DEPENDING ON PROGRESS) or “Pay later with cash.” He already has a Tilt account and pays the fee so he doesn’t have to take out cash later. Gale signs out of his RideFind account, and adds the ride into his calendar. <br />On the day of his ride, he meets up at the departure destination and gets into the window seat. A few hours later, Gale is home sweet home.</p>
+
+
+	<a name="Functional-Requirements"></a>
+<h2 >Functional Requirements<a href="#Functional-Requirements" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Users must be able to create a user profile</li>
+		<li>The program will require a user to login before allowing data to be input or accessed</li>
+		<li>Users must be able to create a ride</li>
+		<li>Users must be able to book a seat when a ride offer has been posted</li>
+		<li>The program will notify a driver when a spot has been filled</li>
+		<li>Users must be able to email other users</li>
+		<li>Passengers must be able to review drivers after the ride</li>
+		<li>Users must be able to use search functionality to find rides according to various preferences, they should also be able to refine their search to see more specific results</li>
+	</ul>
+
+
+	<a name="Nonfunctional-Requirements"></a>
+<h2 >Nonfunctional Requirements<a href="#Nonfunctional-Requirements" class="wiki-anchor">&para;</a></h2>
+
+
+<em><strong>Usability:</strong></em> 
+	<ul>
+	<li>Users with any ability level should be able to find the software’s features intuitive and able to use them with a minimal learning curve</li>
+	</ul>
+
+
+<em><strong>Reliability:</strong></em>
+	<ul>
+	<li>The software should not experience failure normally</li>
+		<li>In case of failure, it should always be able to restart</li>
+		<li>Most exceptions will come from the user’s input (during account registration, posting ride information). Most of the cases should be considered during the design and testing, in case of an exception, a warning message will be alerted to inform the users of the proper input format</li>
+		<li>Information posted should always be appropriate and should be monitored</li>
+		<li>Users’ privacy and the process of money transfer should always be protected.</li>
+		<li>RideFind should have the ability to handle 70% of people currently enrolled in the Queen's RideShare Facebook group using the software at one time but for testing purposes the software must be able to handle 6 people using the software at a time</li>
+	</ul>
+
+
+<em><strong>Performance:</strong></em>
+	<ul>
+	<li>The data transferred will mostly be in text form, there is minimal amount of pictures. Therefore, the messaging system and the ride posting system should have minimum latency.</li>
+		<li>Students in Queen’s University are expected users currently</li>
+		<li>The software should also be really responsive</li>
+	</ul>
+
+
+<em><strong>Supportability:</strong></em>
+	<ul>
+	<li>Software supports Windows OS environment</li>
+	</ul>
+
+
+<em><strong>Legal:</strong></em>
+	<ul>
+	<li>The users should agree to the terms of use for sharing some personal information information such as age, year of University, and their program of study with other RideFind users</li>
+		<li>The users must have a verified Queen's email to join RideFind</li>
+		<li>Information such as user’s password must be kept confidential</li>
+	</ul>
+
+
+<strong><em>Response Time:</em></strong>
+	<ul>
+	<li>Response time must be fast enough that other users see that a spot has been filled less than a second after it has been taken</li>
+	</ul>
+</body>
+</html>

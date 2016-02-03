@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>1) Introduction</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="1-Introduction"></a>
+<h1 >    1 Introduction<a href="#1-Introduction" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="11-Purpose-of-the-System"></a>
+<h2 >    1.1 Purpose of the System<a href="#11-Purpose-of-the-System" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>As university students, we understand the way you move. RideFind enables you to share your commute with others travelling to the same location, sharing costs and minimizing environmental impact.  We aim to connect students with their destinations through safe, reliable, and easy to use service--one ride at a time.</p>
+
+
+	<a name="12-Scope"></a>
+<h2 >    1.2 Scope<a href="#12-Scope" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The major deliverable for this project will be the completed and functional RideFind application. This will involve gathering functional requirements, various pieces of documentation, and both back and front end development. A database will be integrated with the software to hold information about users and rides. A GUI will be developed for the user to interact with the software. This will include pages that allow users to complete functions such as create an account, view open reservations, book a seat in a car, review information about the driver and communicate with other users. The software will also include pages that allow the user to give a user review of the driver after the ride has been completed.</p>
+
+
+	<a name="13-Core-System-Functionalities"></a>
+<h2 >    1.3 Core System Functionalities<a href="#13-Core-System-Functionalities" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>Allow up to a theoretically unlimited amount of users to find/create ride listings. Note that there is no           ability to save a ride listing in a draft; the users must either post it in the database or exit. </li>
+		<li>Provide a GUI that allows users to scroll through listings and navigate through the database.</li>
+		<li>Allow users to create a profile and view other user profiles. </li>
+		<li>Allow users to select from a number of ride listings.</li>
+		<li>Provide a ride search filter.</li>
+		<li>Allow passengers to rate the driver after the ride is complete.</li>
+	</ul>
+
+
+	<a name="14-Objectives-and-Success-Criteria-of-the-Project"></a>
+<h2 >    1.4 Objectives and Success Criteria of the Project<a href="#14-Objectives-and-Success-Criteria-of-the-Project" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li>The design of the GUI to enable intuitive selection of a correct ride based on various preferences (e.g. departure date/time, destination, etc.)</li>
+		<li>The design of a database that allows for the easy and efficient creation and access of ride listings</li>
+		<li>Having a priority queue system so that rides are displayed in order of departure time </li>
+		<li>Powerful search capability</li>
+		<li>Detailed profiles for drivers/passengers so that reviews can be created, improving overall user satisfaction</li>
+	</ul>
+
+
+	<a name="15-Definitions-Acronyms-and-Abbreviations"></a>
+<h2 >    1.5 Definitions, Acronyms, and Abbreviations<a href="#15-Definitions-Acronyms-and-Abbreviations" class="wiki-anchor">&para;</a></h2>
+
+
+	<ul>
+	<li><em><strong>Back-End Development</strong></em>: The back-end consists of the database storing user information.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Completed Ride</strong></em>: When a ride listing has reached its departure date and time and has at least one confirmed passenger.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Driver</strong></em>: A user on RideFind who is offering a ride/is looking for passengers. They will create a ride listing and be paid for "sharing their ride" with others.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Expiration</strong></em>: When a ride listing has reached its departure date and time and has zero passengers, the system deletes it from the database.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Front-End Development</em></strong>:  The front-end is an interface between the user and the back-end. The GUI is the main aspect of front end development.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>GUI</strong></em>:  Graphical User Interface, the windows that users interact with.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong><em>Login Screen</em></strong>:  The first page a user sees. They enter their email and password (which is verified) to access the RideFind Main Page.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong><em>Main Page</em></strong>:  The first page a user sees once they have logged into RideFind.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Passenger</strong></em>:  A user on RideFind who is searching for a ride/looking for a driver. They will look at different ride listings to see what would work best for them and then pay the driver for "sharing their ride".</li>
+	</ul>
+
+
+	<ul>
+	<li><strong><em>Priority Queue</em></strong>:  The ride listings will be displayed in the main page prioritized in terms of spots left and time of departure. A priority queue will be data structure used to implement this.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Profile</strong></em>: All users will have created a profile associated with them. Their name, student email, car model, profile picture and summary of recent reviews are included in their profile.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Review</strong></em>:  Users can provide feedback to indicate their satisfaction or dissatisfaction with a completed ride.  They can fill out a number of starts, write a comment or do both.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Ride Booking</strong></em>: When a driver and a passenger agree upon the conditions of a ride listing.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Ride Listing</strong></em>:  Ride listings are displayed on the main page. Details of a ride listing are:  driver name, destination, departure location, date of departure, time of departure, seats and cost.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong><em>Ridesharers</em></strong>:  People who believe in the "ridesharing" mantra and use RideFind.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong><em>Search Bar</strong></em>: Displayed on the main page, a user can change various categories to refine what ride listings are displayed.</li>
+	</ul>
+
+
+	<ul>
+	<li><em><strong>Spots</strong></em>: This number is based on the number of free spots in a car.</li>
+	</ul>
+
+
+	<ul>
+	<li><strong><em>Verification</em></strong>:  To ensure that a local community of Ridesharers is created, university/college emails are needed to register for RideFind.</li>
+	</ul>
+</body>
+</html>

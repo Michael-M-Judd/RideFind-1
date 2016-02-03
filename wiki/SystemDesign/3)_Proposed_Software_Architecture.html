@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>3) Proposed Software Architecture</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="3-Proposed-Software-Architecture"></a>
+<h1 >3) Proposed Software Architecture<a href="#3-Proposed-Software-Architecture" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="a-Subsystem-Decomposition"></a>
+<h2 >a.) Subsystem Decomposition<a href="#a-Subsystem-Decomposition" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/1340/CMPE320ClassDiagram.jpg" alt="" /></p>
+
+
+	<a name="b-Sequence-Diagrams"></a>
+<h2 >b.) Sequence Diagrams<a href="#b-Sequence-Diagrams" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>The following diagrams model the collaboration of objects based on a time sequence. Each diagram corresponds to a use case, outlining how the objects interact in the particular case. To view the use case diagrams, see the link posted at the end of the page.</p>
+
+
+	<a name="RegisterNewUser"></a>
+<h3 >RegisterNewUser<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1262/Screen%20Shot%202015-10-31%20at%204.26.07%20PM.png" alt="" /><a href="#RegisterNewUser" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="SignIn"></a>
+<h3 >SignIn<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1263/Screen%20Shot%202015-11-02%20at%209.01.27%20PM.png" alt="" /><a href="#SignIn" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="CreateNewRide"></a>
+<h3 >CreateNewRide<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1264/Screen%20Shot%202015-11-02%20at%209.01.33%20PM.png" alt="" /><a href="#CreateNewRide" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="FindARide"></a>
+<h3 >FindARide<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1265/Screen%20Shot%202015-11-02%20at%209.01.52%20PM.png" alt="" /><a href="#FindARide" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="BookRide"></a>
+<h3 >BookRide<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1266/Screen%20Shot%202015-11-02%20at%209.01.42%20PM.png" alt="" /><a href="#BookRide" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="ReviewDriver-Extra-feature"></a>
+<h3 >ReviewDriver (Extra feature)<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1267/Screen%20Shot%202015-11-02%20at%209.01.21%20PM.png" alt="" /><a href="#ReviewDriver-Extra-feature" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="Use-Case-Model-From-RADa-Use-Case-Model"></a>
+<h2 >Use Case Model (From RAD):<br /><a href="A)_Use_Case_Model_.html" class="wiki-page">a.) Use Case Model </a><a href="#Use-Case-Model-From-RADa-Use-Case-Model" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="c-Persistent-Data-Management"></a>
+<h2 >c.) Persistent Data Management<a href="#c-Persistent-Data-Management" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>Section Goal: Describe the persistent data stored by the system and the data management infrastructure required for it. This section should include the description of data schemes, the selection of a database, and a description of the encapsulation of the database.</p>
+
+
+	<p>A MySQL database will be used to store information essential to the functioning of the RideFind application. MySQL integrates well with Visual Studio and SQLAPI++ library has been selected for connection and sending commands to the database. The database relation will have four different tables including User, Car, Ride and Ban.</p>
+
+
+	<p>The database will be used to store user information in a User table which contains information about the user such as a unique identifier, name (first and last), birthday, email and role within the application; passenger or driver represented as a binary number.</p>
+
+
+	<p>The database will also store information on the car in the Car table. This relation will store information such as the car's make, model and year and each car will be linked to a driver's identification number.</p>
+
+
+	<p>The ride table in the database will store information on each ride created by a driver. This relation will contain information on departure location, departure time and arrival location. For each user associated with the ride, there will be a new instance of the ride in the database and a binary column will be used to indicate whether the user is a passenger or driver for that particular ride since drivers are able to be drivers and passengers in the application.</p>
+
+
+	<p>Should a driver be banned from the software, data will be added to the Ban relation. The driver's unique identifier, time of ban, duration of ban, and whether the ban is permanent will be stored in the Ban table.</p>
+
+
+	<a name="d-Access-Control-and-Security"></a>
+<h2 >d.) Access Control and Security<a href="#d-Access-Control-and-Security" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>RideFind will not require a driver's licence number from a registered driver. Therefore, information encryption will not be used in the program. <br />The user account information will be stored in the database and accessed only upon login to verify the user.</p>
+
+
+	<a name="e-Constructed-GUI"></a>
+<h2 >e.) Constructed GUI<a href="#e-Constructed-GUI" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>RideFind GUI, fully functional buttons included.</p>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/1454/SigninScreenshot.png" alt="" /><br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1455/SignUpScreenshot.png" alt="" /><br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1451/MainScreenshot.png" alt="" /><br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1456/CreateRideScreenshot.png" alt="" /><br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1453/BookedrideScreenshot.png" alt="" /><br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1452/aboutScreenshot.png" alt="" /></p>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>4) System Models</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="4-System-Models"></a>
+<h1 >4) System Models<a href="#4-System-Models" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="41-Use-Case-Models"></a>
+<h2 >4.1 Use Case Models<a href="#41-Use-Case-Models" class="wiki-anchor">&para;</a></h2>
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>RegisterNewUser                             </td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>USER                                        </td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.                     </td>
+		</tr>
+		<tr>
+			<td>USER is not registered.                     </td>
+		</tr>
+		<tr>
+			<td rowspan="3">Flow of Events:        </td>
+			<td>1.USER initiates new profile function.      </td>
+		</tr>
+		<tr>
+			<td>2.SYSTEM presents user with RegistrationForm    </td>
+		</tr>
+		<tr>
+			<td>3.USER information is stored in the database    </td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>USER is now signed in.                      </td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>SignIn                                      </td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>USER                                        </td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.                   </td>
+		</tr>
+		<tr>
+			<td>USER is not signed in.                    </td>
+		</tr>
+		<tr>
+			<td rowspan="3">Flow of Events:        </td>
+			<td>1.SYSTEM presents user with the sign in page  </td>
+		</tr>
+		<tr>
+			<td>2.USER inputs username and password           </td>
+		</tr>
+		<tr>
+			<td>3.SYSTEM verifies user information            </td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>USER is now signed in.                      </td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>CreateNewRide                               </td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>DRIVER                                      </td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.                   </td>
+		</tr>
+		<tr>
+			<td>USER is signed in.                        </td>
+		</tr>
+		<tr>
+			<td rowspan="5">Flow of Events:        </td>
+			<td>1.USER initiates ride offer function.         </td>
+		</tr>
+		<tr>
+			<td>2.SYSTEM presents user with OfferForm         </td>
+		</tr>
+		<tr>
+			<td>3.Ride information is stored in the database  </td>
+		</tr>
+		<tr>
+			<td>4.SYSTEM adds the ride listing to the main page</td>
+		</tr>
+		<tr>
+			<td>5.SYSTEM confirms the ride offer with the USER</td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>The ride listing is now updated to include the new ride offer.</td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>EmptyCar                                                        </td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>SYSTEM                                                          </td>
+		</tr>
+		<tr>
+			<td>Entry Conditions:         </td>
+			<td>Application is running.                                         </td>
+		</tr>
+		<tr>
+			<td rowspan="3">Flow of Events:        </td>
+			<td>1.SYSTEM uses a timer to check if the ride listing has expired  </td>
+		</tr>
+		<tr>
+			<td>2.SYSTEM checks for any booked spots                            </td>
+		</tr>
+		<tr>
+			<td>3.SYSTEM deletes the ride listing if all the spots are vacant   </td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>SYSTEM updates the main page.                           </td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>BookARide </td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>PASSENGER</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.</td>
+		</tr>
+		<tr>
+			<td>USER is signed in. </td>
+		</tr>
+		<tr>
+			<td rowspan="3">Flow of Events:        </td>
+			<td>1.USER selects a ride listing from the main page</td>
+		</tr>
+		<tr>
+			<td>2.SYSTEM confirms the ride booking with the USER</td>
+		</tr>
+		<tr>
+			<td>3.SYSTEM sends the DRIVER an email confirmation</td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>SYSTEM updates the ride listing showing one less spot in the car.</td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>FullCar</td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>PASSENGER</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:         </td>
+			<td>Application is running.</td>
+		</tr>
+		<tr>
+			<td>USER is signed in.</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Flow of Events:        </td>
+			<td>USER selects a ride listing from the main page</td>
+		</tr>
+		<tr>
+			<td>SYSTEM presents USER with a message indicating that the car is full</td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>SYSTEM removes the ride listing from the main page.</td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>ReviewDriver</td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>USER</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.</td>
+		</tr>
+		<tr>
+			<td>USER is signed in. </td>
+		</tr>
+		<tr>
+			<td rowspan="4">Flow of Events:        </td>
+			<td>1.SYSTEM uses a timer to indicate that a ride booking has expired</td>
+		</tr>
+		<tr>
+			<td>2.SYSTEM presents USER with previous/completed rides</td>
+		</tr>
+		<tr>
+			<td>3.USER submits a review </td>
+		</tr>
+		<tr>
+			<td>4.Review information is stored in the database</td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>SYSTEM updates the DRIVER profile.</td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>EmailUser</td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>USER</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.</td>
+		</tr>
+		<tr>
+			<td>USER is signed in. </td>
+		</tr>
+		<tr>
+			<td rowspan="3">Flow of Events:        </td>
+			<td>1.USER initiates the mailing function</td>
+		</tr>
+		<tr>
+			<td>2.SYSTEM presents USER with ComposeEmail page</td>
+		</tr>
+		<tr>
+			<td>3.USER composes and sends a message</td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>SYSTEM presents USER with email confirmation page.</td>
+		</tr>
+	</table>
+
+
+
+
+	<table>
+		<tr>
+			<td>Name:                     </td>
+			<td>FindARide</td>
+		</tr>
+		<tr>
+			<td>Actor:                    </td>
+			<td>PASSENGER</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Entry Conditions:      </td>
+			<td>Application is running.</td>
+		</tr>
+		<tr>
+			<td>USER is signed in. </td>
+		</tr>
+		<tr>
+			<td>Flow of Events:           </td>
+			<td>USER refines displayed ride listing using the checklist</td>
+		</tr>
+		<tr>
+			<td>Exit Conditions:          </td>
+			<td>SYSTEM presents USER with an updated ride listing.</td>
+		</tr>
+	</table>
+
+
+
+
+	<a name="42-User-Interface-Navigational-Paths-and-Screen-Mock-ups"></a>
+<h2 >4.2 User Interface - Navigational Paths and Screen Mock-ups<a href="#42-User-Interface-Navigational-Paths-and-Screen-Mock-ups" class="wiki-anchor">&para;</a></h2>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/998/RAD%20Screen%20Mockup_html_m6c44cd56.png" alt="" /><br />Figure 1 Main Screen</p>
+
+
+	<a name="Menu-Bar"></a>
+<h3 >Menu Bar:<a href="#Menu-Bar" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   File<br />       o    Log Out... (Ctrl+L)<br />       o    Exit... (Ctrl+Q)</li>
+		<li>   Edit <br />       o    Undo (Ctrl+Z)<br />       o    Redo (Ctrl+Y)<br />       o    Search (Ctrl+L)</li>
+		<li>   View<br />       o    Zoom In (Ctrl++)<br />       o    Zoom Out (Ctrl+-)</li>
+		<li>   Help<br />       o    About (F1)<br />       o    Instructions (F2)</li>
+	</ul>
+
+
+	<a name="Secondary-Menu-Bar"></a>
+<h3 >Secondary Menu Bar:<a href="#Secondary-Menu-Bar" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   The second bar below the main bar includes some of the important features of the application.<br />       o    Create Your Ride Here Button: brings the user to a screen to create their ride listing<br />       o    Commute from: field where user can type where they want to start their trip<br />       o     Commute to: field where use can type their destination.<br />       o    Date: allows user to select the date of departure.<br />       o    Search button: once the 3 fields are filled will define the results for ride listings and only <br />                show the ones that match the search.<br />       o    Bell button: displays how many notifications the user has, and if clicked will bring the <br />                user to the window showing their recent interactions.<br />       o    Envelope button: displays how many pending messages the user has, if clicked will bring <br />                the user to the messaging feature.<br />       o    Username button: shows the users name. If clicked will bring the user to their own <br />                profile.</li>
+	</ul>
+
+
+	<a name="Left-Side-Menu-Bar"></a>
+<h3 >Left Side Menu Bar:<a href="#Left-Side-Menu-Bar" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   MAIN is the category listing the core functions of the program<br />       o    Browse button brings the user back to the listings page<br />       o    My Rides button brings the user to their rides they have agreed to take and have <br />                previously taken<br />       o    My Profile is second button that brings the user to their profile</li>
+		<li>   YOUR LISTINGS is the category to manage their own rides they have created<br />       o    Add Ride button brings the user to a screen to create their ride listing<br />       o    Manage Ride button brings the user to a screen to edit their own rides</li>
+		<li>   SEARCH is the category to refine their search by an array of options<br />       o    Sort By is a drop down menu where the user can choose an option to sort the listings by <br />                including price, driver name, destination, departure location, seats, ending soonest and <br />                ending latest.<br />       o    Free Ride: refines the listings to only rides that cost 0.<br />       o    Two Seats: refines the listings to at least two seat listings.<br />       o    This Week:  refines the listings to a maximum of ending within the week of current time.<br />       o    Profile Picture: text underneath "Review your last driver." Will bring the user to a page <br />                where they can rate their driver out of 5 stars and give a comment for their profile.<br />                Find Your Ride Table:</li>
+		<li>   Find your ride table is the main function of the program. It shows a list of the users who have <br />        posted a ride listing. The listing includes the drivers name, destination, departure location, date <br />        of departure, time of departure, seats available, message button, and price. The listings are <br />        organized by default by listings ending soonest.<br />       o    Message button: opens a window where you can send a message to the listing creator.<br />       o    Listing button: The whole listing itself is a clickable button which will open a new <br />                window where you can confirm to take the ride.<br />       o    Keyboard only features include: <br />               ?    DOWN and UP to scroll through listings.</li>
+	</ul>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/995/RAD%20Screen%20Mockup_html_60bbac90.png" alt="" /><br />Figure 2 Startup Page</p>
+
+
+	<a name="Startup-Page"></a>
+<h3 >Startup Page:<a href="#Startup-Page" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   This is the first page the user will see opening the program for the first time.</li>
+		<li>   Includes information about RideFind on the left.</li>
+		<li>   List of required information the user must type in on the right hand side:<br />o    Name: First and last name<br />o    Student E-Mail: Email ending with a university domain<br />o    Choose a Password: password, minimum length 4 characters<br />o    Confirm Password: must be the same string as the Choose a Password field<br />o    Birthday: dropdown selection of month number, day number, and year number<br />o    Gender: field where user can type their gender<br />o    Mobile Phone: phone number<br />o    Location: where user is located<br />o    Car Model: user can type their car model if applicable.<br />o    Profile Picture: user can choose an image file from their computer to create a profile <br />picture<br />o    Sign Up button: requires all but Gender, Mobile Phone and Car Model to be filled out, it <br />will then put the user into the database.<br />o    Sign In button: will close the current screen and open the Sign In screen.</li>
+	</ul>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/996/RAD%20Screen%20Mockup_html_15330b7a.png" alt="" /><br />Figure 3 Sign in page</p>
+
+
+	<a name="Sign-In-Page"></a>
+<h3 >Sign In Page:<a href="#Sign-In-Page" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   After opening the application more than once, this will be the first page the user sees.</li>
+		<li>   This is where the user will log into the program using his information they signed up with.<br />o    Student E-Mail: User enters their student email<br />o    Password: User enters their password<br />o    Continue Button: If valid login is in database, the main screen will appear, if not, it will <br />prompt the user to try again</li>
+		<li>   Keyboard only features include:<br />o    ENTER: if valid login is in database, the main screen will appear, if not, it will prompt the <br />user to try again.</li>
+		<li>   The bottom text is an executive summary of our program.</li>
+	</ul>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/999/RAD%20Screen%20Mockup_html_m32ea9b6f.png" alt="" /><br />Figure 4 Message Popup</p>
+
+
+	<a name="Message-Popup"></a>
+<h3 >Message Popup:<a href="#Message-Popup" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   After clicking the message button, Figure 4 will open, allowing the user to <br />communicate with the poster.<br />o    Send button:  send the message to the poster once text has been entered<br />o    Type your message here field allows user to type from keyboard and it will appear in the <br />field, once their message has been typed they hit the send button.</li>
+		<li>   Once a message has been typed in the message box and sent, they will appear on screen in the <br />order that they have been sent</li>
+		<li>   Keyboard features include:<br />o    ENTER automatically sends the typed message</li>
+	</ul>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/997/RAD%20Screen%20Mockup_html_17336d35.png" alt="" /><br />Figure 5 About</p>
+
+
+	<a name="About-Popup"></a>
+<h3 >About Popup:<a href="#About-Popup" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   Displays the logo and program name, along with the creators of the project.<br />o    Close button: closes the popup.</li>
+		<li>   Keyboard features include:<br />o    ENTER: closes the popup.</li>
+	</ul>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/1000/RAD%20Screen%20Mockup_html_m639eca83.png" alt="" /><br />Figure 6 Instructions</p>
+
+
+	<h3>Instructions Popup:
+	<ul>
+	<li>   Includes all the necessary information in order to get started using the program.</li>
+	</ul></h3>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/1001/RAD%20Screen%20Mockup_html_m29093ef3.png" alt="" /><br />Figure 7 Edit Profile</p>
+
+
+	<a name="Edit-Profile-Popup"></a>
+<h3 >Edit Profile Popup:<a href="#Edit-Profile-Popup" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   Allows the user to edit their previously entered information on sign-up including editing name, <br />email, change password, car model, and creating a profile picture.<br />o    Profile Picture field button opens up a window to select an image file which will be used <br />as the users profile picture.</li>
+		<li>   Keyboard features include: <br />o    TAB to cycle between editable fields.</li>
+	</ul>
+
+
+	<p><img src="http://prajna.caslab.queensu.ca/attachments/download/982/RAD%20Screen%20Mockup_html_6cd6d4d5.png" alt="" /><br />Figure 8 Review</p>
+
+
+	<a name="Review-Popup"></a>
+<h3 >Review Popup:<a href="#Review-Popup" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>   After clicking the review button on the bottom left hand side of the main screen, this window <br />appears.</li>
+		<li>   The user is able to click the amount of stars they choose to rate out of 5. Once they click the <br />number of stars the blank stars will fill in.</li>
+		<li>   Confirm Rating button submits the rating once the amount of stars have been clicked.</li>
+		<li>   Keyboard features include:<br />o    ENTER has the same functionality as the confirm rating button.</li>
+	</ul>
+</body>
+</html>

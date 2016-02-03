@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>6) Revisions Made</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<a name="6-Revisions-Made"></a>
+<h1 >6) Revisions Made<a href="#6-Revisions-Made" class="wiki-anchor">&para;</a></h1>
+
+
+	<a name="Subsystem-Decomposition"></a>
+<h2 >Subsystem Decomposition<a href="#Subsystem-Decomposition" class="wiki-anchor">&para;</a></h2>
+
+
+	<p>As programming began, changes needed to be made to the methods and attributes in the existing class diagram found in  Section 3a. The Driver class was removed because it was redundant and was mostly handled by the User class. The db Class was also removed because the only methods it contained were Connect and Disconnect so the group felt that these classes could be handled by the dbHelper class.</p>
+
+
+	<p>The parameters passed into the dbHelper class were changed due to circular dependency errors. The circular dependency errors were occurring because User and Ride were both referencing dbHelper to call the database but dbHelper was also calling User and Ride to use these classes. To resolve this error, parameters from Ride and User were handled in their respective classes and they were passed in the correct format to the dbHelper class. This meant that dbHelper no longer needed to reference User and Ride, therefore removing the circular dependency.</p>
+
+
+	<p>Since the GUI was programmed using C#, another change that needed to be made was changing unmanaged classes to managed. Then, it was noticed that the managed classes don't support string (std::string). Therefore, we had to use String^ (System::String).</p>
+
+
+	<p>The updated class diagram can be found below<br /><img src="http://prajna.caslab.queensu.ca/attachments/download/1768/UpdatedClassDiagram320.jpg" alt="" /></p>
+</body>
+</html>

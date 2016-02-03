@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>System Design Document</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+a.wiki-anchor { display: none; margin-left: 6px; text-decoration: none; }
+a.wiki-anchor:hover { color: #aaa !important; text-decoration: none; }
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor { display: inline; color: #ddd; }
+</style>
+</head>
+<body>
+<p><img src="http://prajna.caslab.queensu.ca/attachments/download/1774/sdd.png" alt="" /></p>
+
+
+	<p>The purpose of the system design document or SDD is to describe what RideFind is intended for and contain a detailed description of the program's architecture and system components. It is used to define interfaces between the developing team and serve as a reference when decisions need to be revisited.</p>
+
+
+	<p>In this document (accessed by following the links through Redmine), we outline the purpose and scope of our software as well as the design goals. Class models and sequence diagrams describing the use cases are included to demonstrate all core functionalities of the system. The methods of data management, security, and subsystem services are also included.</p>
+
+
+	<p>Source for our semi-functional GUI can be found in our repository.</p>
+
+
+	<p>Finally we outline our team's timeline over the next 7 weeks as well as team roles to ensure that we have met our design goals by week 12 of the course.</p>
+
+
+	<ul class="toc"><li><a href="#1-Introduction">1.) Introduction</a><ul><li><a href="#a-Purpose">a.) Purpose</a></li><li><a href="#b-Scope">b.) Scope</a></li><li><a href="#c-Design-Goals">c.) Design Goals</a></li><li><a href="#d-Glossary">d.) Glossary</a></li></ul>
+</li><li><a href="#2-Current-System">2.) Current System</a></li><li><a href="#3-Proposed-Software-Architecture">3.) Proposed Software Architecture</a><ul><li><a href="#a-Subsystem-Decomposition">a.) Subsystem Decomposition</a></li><li><a href="#b-Software-Mapping">b.) Software Mapping</a></li><li><a href="#c-Persistent-Data-Management">c.) Persistent Data Management</a></li><li><a href="#d-Access-Control-and-Security">d.) Access Control and Security</a></li></ul>
+</li><li><a href="#4-Subsystem-Services">4.) Subsystem Services</a></li><li><a href="#5-Project-Management">5.) Project Management</a><ul><li><a href="#a-Timeline">a.) Timeline</a></li><li><a href="#b-Team-Roles">b.) Team Roles</a></li></ul>
+</li><li><a href="#6-Revisions-Made">6.) Revisions Made</a></li></ul>
+
+
+	<a name="1-Introduction"></a>
+<h2 ><a href="1)_Introduction.html" class="wiki-page">1.) Introduction</a><a href="#1-Introduction" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="a-Purpose"></a>
+<h3 > <a href="A)_Purpose.html" class="wiki-page">a.) Purpose</a><a href="#a-Purpose" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="b-Scope"></a>
+<h3 > <a href="B)_Scope.html" class="wiki-page">b.) Scope</a><a href="#b-Scope" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="c-Design-Goals"></a>
+<h3 > <a href="C)_Design_Goals.html" class="wiki-page">c.) Design Goals</a><a href="#c-Design-Goals" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="d-Glossary"></a>
+<h3 ><a href="_d)_Glossary_.html" class="wiki-page"> d.) Glossary </a><a href="#d-Glossary" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="2-Current-System"></a>
+<h2 ><a href="2)_Current_System.html" class="wiki-page">2.) Current System</a><a href="#2-Current-System" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="3-Proposed-Software-Architecture"></a>
+<h2 ><a href="3)_Proposed_Software_Architecture.html" class="wiki-page">3.) Proposed Software Architecture</a><a href="#3-Proposed-Software-Architecture" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="a-Subsystem-Decomposition"></a>
+<h3 ><a href="A)_Subsystem_Decomposition.html" class="wiki-page">a.) Subsystem Decomposition</a><a href="#a-Subsystem-Decomposition" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="b-Software-Mapping"></a>
+<h3 ><a href="B)_Software_Mapping_.html" class="wiki-page">b.) Software Mapping </a><a href="#b-Software-Mapping" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="c-Persistent-Data-Management"></a>
+<h3 ><a href="C)_Persistent_Data_Management.html" class="wiki-page">c.) Persistent Data Management</a><a href="#c-Persistent-Data-Management" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="d-Access-Control-and-Security"></a>
+<h3 ><a href="D)_Access_Control_and_Security_.html" class="wiki-page">d.) Access Control and Security </a><a href="#d-Access-Control-and-Security" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="4-Subsystem-Services"></a>
+<h2 ><a href="4)_Subsystem_Services_.html" class="wiki-page">4.) Subsystem Services </a><a href="#4-Subsystem-Services" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="5-Project-Management"></a>
+<h2 ><a href="5)_Project_Management.html" class="wiki-page">5.) Project Management</a><a href="#5-Project-Management" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="a-Timeline"></a>
+<h3 ><a href="A)_Timeline.html" class="wiki-page">a.) Timeline</a><a href="#a-Timeline" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="b-Team-Roles"></a>
+<h3 ><a href="B)_Team_Roles.html" class="wiki-page">b.) Team Roles</a><a href="#b-Team-Roles" class="wiki-anchor">&para;</a></h3>
+
+
+	<a name="6-Revisions-Made"></a>
+<h2 ><a href="6)_Revisions_Made.html" class="wiki-page">6.) Revisions Made</a><a href="#6-Revisions-Made" class="wiki-anchor">&para;</a></h2>
+</body>
+</html>
