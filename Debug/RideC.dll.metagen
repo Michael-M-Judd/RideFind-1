@@ -1,0 +1,26 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly RideC, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class RideC.Ride: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Int32, Int32, Int32, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, Int32, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getRideID(): PrivateScope, Public, HideBySig
+    getNumSpots(): PrivateScope, Public, HideBySig
+    getDepTime(): PrivateScope, Public, HideBySig
+    getCost(): PrivateScope, Public, HideBySig
+    getName(): PrivateScope, Public, HideBySig
+    getDestLocation(): PrivateScope, Public, HideBySig
+    getDepLocation(): PrivateScope, Public, HideBySig
+Class RideC.InvalidRideException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    what(): PrivateScope, Public, HideBySig

@@ -1,0 +1,31 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly UserC, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class UserC.UserException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    what(): PrivateScope, Public, HideBySig
+Class UserC.User: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.String, System.String, System.String, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    getName(): PrivateScope, Public, HideBySig
+    getEmail(): PrivateScope, Public, HideBySig
+    getLocation(): PrivateScope, Public, HideBySig
+    driveCheck(): PrivateScope, Public, HideBySig
+    setLocation(String): PrivateScope, Public, HideBySig
+    setName(String): PrivateScope, Public, HideBySig
+    getPassword(): PrivateScope, Public, HideBySig
+    emailUser(String): PrivateScope, Public, HideBySig
+    bookRide(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
